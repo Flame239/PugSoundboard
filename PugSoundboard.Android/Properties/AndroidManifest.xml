@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.flame239.pugsoundboard">
+	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28" />
+	<application android:label="PugSoundboard.Android" android:icon="@mipmap/pug" android:roundIcon="@mipmap/pug_round"></application>
+</manifest>

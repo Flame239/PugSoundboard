@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.3.1" />
+    <PackageReference Include="LiveXAML" Version="2.1.72" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="sounds\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="images\background.jpg" />
+    <None Remove="images\pugface-1.png" />
+    <None Remove="images\pugface-bark.png" />
+    <None Remove="sounds\pug-noise-3.mp3" />
+    <None Remove="sounds\bark-final.mp3" />
+    <None Remove="sounds\pug-noise-4.mp3" />
+    <None Remove="sounds\pug-snorting.mp3" />
+    <None Remove="sounds\pug-snorting-1.mp3" />
+    <None Remove="sounds\pug-wtf.mp3" />
+    <None Remove="images\pug-young.jpg" />
+    <None Remove="images\pug-young.png" />
+    <None Remove="images\pug-young-1.png" />
+    <None Remove="images\pug-weird.png" />
+    <None Remove="images\pug-sleep-final.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="sounds\pug-bark.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="images\background.jpg" />
+    <EmbeddedResource Include="images\pugface-1.png" />
+    <EmbeddedResource Include="images\pugface-noise-3.png" />
+    <EmbeddedResource Include="sounds\pug-noise-3.mp3" />
+    <EmbeddedResource Include="sounds\bark-final.mp3" />
+    <EmbeddedResource Include="sounds\pug-noise-4.mp3" />
+    <EmbeddedResource Include="sounds\pug-snorting.mp3" />
+    <EmbeddedResource Include="sounds\pug-snorting-1.mp3" />
+    <EmbeddedResource Include="sounds\pug-wtf.mp3" />
+    <EmbeddedResource Include="images\pug-young.png" />
+    <EmbeddedResource Include="images\pug-young-1.png" />
+    <EmbeddedResource Include="images\pug-weird.png" />
+    <EmbeddedResource Include="images\pug-sleep-final.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="AudioPlayer.cs" />
+  </ItemGroup>
+</Project>

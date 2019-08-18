@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:PugSoundboard;assembly=PugSoundboard"
+             xmlns:views="clr-namespace:PugSoundboard.views;assembly=PugSoundboard"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             mc:Ignorable="d"
+             x:Class="PugSoundboard.PugMainPage"
+             BackgroundImage="{local:ImageResource PugSoundboard.images.background.jpg}"
+             ios:Page.UseSafeArea="true">
+    <views:FittableScrollView>
+        <Grid ColumnSpacing="0"
+              RowSpacing="10"
+              Margin="10"
+              Padding="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <views:PugFace Source="{local:ImageResource PugSoundboard.images.pug-young-1.png}"
+                           Audio="pug-wtf.mp3"
+                           Clicked="OnPugFaceClicked" />
+
+            <views:PugFace Grid.Column="1"
+                           Source="{local:ImageResource PugSoundboard.images.pug-young.png}"
+                           Audio="bark-final.mp3"
+                           Clicked="OnPugFaceClicked" />
+
+            <views:PugFace Grid.Row="1"
+                           Source="{local:ImageResource PugSoundboard.images.pug-weird.png}"
+                           Audio="pug-noise-3.mp3"
+                           Clicked="OnPugFaceClicked" />
+
+            <views:PugFace Grid.Row="1"
+                           Grid.Column="1"
+                           Source="{local:ImageResource PugSoundboard.images.pugface-1.png}"
+                           Audio="pug-noise-4.mp3"
+                           Clicked="OnPugFaceClicked" />
+
+            <views:PugFace Grid.Row="2"
+                           Source="{local:ImageResource PugSoundboard.images.pugface-noise-3.png}"
+                           Audio="pug-snorting.mp3"
+                           Clicked="OnPugFaceClicked" />
+
+            <views:PugFace Grid.Row="2"
+                           Grid.Column="1"
+                           Source="{local:ImageResource PugSoundboard.images.pug-sleep-final.png}"
+                           Audio="pug-snorting-1.mp3"
+                           Clicked="OnPugFaceClicked" />
+        </Grid>
+    </views:FittableScrollView>
+</ContentPage>
